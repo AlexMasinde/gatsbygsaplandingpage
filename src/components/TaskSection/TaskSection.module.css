@@ -1,0 +1,73 @@
+.container {
+  background-color: #c5cebd;
+  height: 100vh;
+}
+
+.sectionGrid {
+  height: fit-content;
+  display: grid;
+  width: 1350px;
+  grid-template-columns: 558px 429px;
+  column-gap: 53px;
+  margin: 0 auto;
+  /* background-color: yellow; */
+  position: relative;
+}
+
+.sectionGrid::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  top: -23%;
+  width: 375px;
+  height: 530px;
+  left: 72.3%;
+  background-image: url("../../images/taskrighttop.png");
+  background-repeat: no-repeat;
+}
+
+.sectionGrid::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  top: 77%;
+  width: 375px;
+  height: 530px;
+  left: 72.3%;
+  background-image: url("../../images/taskrightbottom.png");
+  background-repeat: no-repeat;
+}
+
+.left {
+  height: 704px;
+  margin-top: 125px;
+}
+
+.left,
+.rightTop,
+.rightBottom {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.center {
+  align-self: center;
+}
+
+.center > h3 {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 60px;
+  line-height: 66px;
+  letter-spacing: -2.25px;
+  color: #ffffff;
+  margin-bottom: 42px;
+  margin-left: -110px;
+  font-weight: 400;
+}
+
+.center > p {
+  font-size: 16px;
+  font-family: "DM sans", sans-serif;
+  color: #6e645f;
+  line-height: 24px;
+}

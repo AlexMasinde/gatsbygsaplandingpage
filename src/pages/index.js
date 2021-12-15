@@ -1,8 +1,8 @@
 import React from "react";
-import FirstSection from "../components/FirstSection/FirstSection";
 import Hero from "../components/Hero/Hero";
 import Layout from "../components/layout/Layout";
 import Navigation from "../components/navigation/navigation";
+import TaskSection from "../components/TaskSection/TaskSection";
 
 export default function IndexPage() {
   return (
@@ -11,7 +11,7 @@ export default function IndexPage() {
         <Navigation />
         <Hero />
       </div>
-      <FirstSection />
+      <TaskSection />
     </Layout>
   );
 }
