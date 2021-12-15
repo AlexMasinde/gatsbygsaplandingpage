@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+  width: 1342px;
+  padding-top: 30px;
+  margin: 0 auto 30px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navigation,
+.appointment {
+  font-size: 16px;
+  font-family: "DM Sans", sans-serif;
+  letter-spacing: -0.4px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.navigation > p:not(:first-child) {
+  margin-left: 82px;
+}
+
+.logo {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -1.2px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-25%);
+}
+
+.appointment {
+  border-bottom: 2px solid #f95454;
+  padding-bottom: 7px;
+}
