@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "../components/Hero/Hero";
 import Layout from "../components/layout/Layout";
 import Navigation from "../components/navigation/navigation";
+import Services from "../components/Services/Services";
 import TaskSection from "../components/TaskSection/TaskSection";
 
 export default function IndexPage() {
@@ -12,6 +13,7 @@ export default function IndexPage() {
         <Hero />
       </div>
       <TaskSection />
+      <Services />
     </Layout>
   );
 }

@@ -1,0 +1,154 @@
+.container {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #dfccc2;
+  position: relative;
+  z-index: 1;
+}
+
+.servicesHeader {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  text-align: center;
+}
+
+.servicesHeader > h3 {
+  font-size: 32px;
+  color: #ffffff;
+  letter-spacing: -1.5px;
+  font-weight: 400;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.servicesGrid {
+  display: grid;
+  width: 870px;
+  grid-template-columns: repeat(3, 190px);
+  column-gap: 150px;
+  grid-template-columns: repeat(10fr, calc(761px / 10));
+  height: 761px;
+  margin: auto;
+}
+.servicesLeft {
+  grid-area: 1 / 1 / span 3 / span 1;
+  max-height: 325px;
+}
+
+.servicesCenter {
+  grid-area: 3 / 2 / span 5 / span 1;
+  max-height: 546px;
+}
+
+.servicesRight {
+  grid-area: 2 / 3 / span 4 / span 1;
+  max-height: 379px;
+}
+
+.servicesCenter,
+.servicesRight,
+.servicesLeft,
+.servicesCenter::before,
+.servicesRight::before {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.servicesCenter,
+.servicesRight,
+.servicesLeft {
+  position: relative;
+}
+
+.servicesRight::after,
+.servicesLeft::after,
+.servicesCenter::after,
+.servicesCenter::before,
+.servicesRight::before {
+  position: absolute;
+}
+
+.servicesLeft::after {
+  content: "Cut.";
+}
+
+.servicesCenter::after {
+  content: "Color.";
+  top: -67px;
+}
+
+.servicesRight::after {
+  content: "Design.";
+}
+
+.servicesRight::after,
+.servicesLeft::after,
+.servicesCenter::after {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 30px;
+  color: #ffffff;
+  letter-spacing: -1.25px;
+  line-height: 37px;
+}
+
+.servicesRight::after,
+.servicesLeft::after {
+  bottom: -67px;
+}
+
+.servicesCenter::before,
+.servicesRight::before {
+  content: "";
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.servicesCenter::before {
+  height: 203px;
+  width: 219px;
+  background-image: url("../../images/servciesCenterSvg.svg");
+  top: 75%;
+  left: 25%;
+}
+
+.servicesRight::before {
+  background-image: url("../../images/servciesRightSvg.svg");
+  width: 219px;
+  height: 100%;
+  transform: scale(0.5);
+  top: 25%;
+  left: 45%;
+}
+
+.servicesCenterText {
+  position: absolute;
+  color: #ffffff;
+  width: 317px;
+  bottom: -80px;
+  left: -270px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.servicesCenterText > h3 {
+  font-size: 36px;
+  line-height: 40px;
+  font-family: "Lexend Deca", sans-serif;
+  letter-spacing: -1.5px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.servicesCenterText > p {
+  font-family: "DM sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.4px;
+  line-height: 21px;
+  border-bottom: 2px solid #f95454;
+  padding-bottom: 7px;
+  width: fit-content;
+}
