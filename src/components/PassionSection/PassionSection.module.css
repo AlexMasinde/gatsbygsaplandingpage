@@ -1,0 +1,106 @@
+.container {
+  height: 100vh;
+  background-color: #c2b8cc;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+.passionsGrid {
+  display: grid;
+  width: fit-content;
+  grid-template-columns: repeat (15, calc(100% / 15));
+  grid-template-rows: repeat (15, calc(100% / 20));
+  height: 682px;
+  margin: 0 auto;
+}
+
+.passionsLeft {
+  height: 229px;
+  grid-area: 7 / 1 / span 3 / span 3;
+  width: 256px;
+  z-index: 1000;
+}
+
+.passionsCenter {
+  grid-area: 2 / 3 / span 8 / span 7;
+  height: 458px;
+  width: 510px;
+  position: relative;
+}
+
+.passionsRight {
+  grid-area: 1 / 9 / span 4 / span 4;
+  height: 252px;
+  width: 303px;
+  z-index: 1000;
+}
+
+.passionsLeft,
+.passionsRight,
+.passionsCenter {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.passionsCenter::before,
+.passionsCenter::after {
+  position: absolute;
+  content: "";
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.passionsCenter::before {
+  background-image: url("../../images/passionsleftSvg.svg");
+  width: 237px;
+  height: 252px;
+  /* transform: rotate(-10deg); */
+  top: 30%;
+  right: 96%;
+  z-index: -1;
+}
+
+.passionsCenter::after {
+  background-image: url("../../images/passionsrightSvg.svg");
+  width: 100%;
+  height: 100%;
+  transform: scale(0.5) rotate(35deg);
+  top: -10%;
+  left: 45%;
+  z-index: -1;
+}
+
+.passionsCenterText {
+  position: absolute;
+  color: #ffffff;
+  width: 273px;
+  top: 55%;
+  left: 86%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.passionsCenterText > h3 {
+  font-size: 40px;
+  line-height: 48px;
+  font-family: "Lexend Deca", sans-serif;
+  letter-spacing: -1.5px;
+  font-weight: 400;
+  margin-bottom: 32px;
+  text-align: right;
+}
+
+.passionsCenterText > p {
+  font-family: "DM sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.4px;
+  line-height: 21px;
+  border-bottom: 2px solid #f95454;
+  padding-bottom: 7px;
+  width: fit-content;
+}
