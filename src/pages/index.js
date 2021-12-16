@@ -5,6 +5,7 @@ import Navigation from "../components/navigation/navigation";
 import PassionSection from "../components/PassionSection/PassionSection";
 import Services from "../components/Services/Services";
 import TaskSection from "../components/TaskSection/TaskSection";
+import Footer from "../components/Footer/Footer";
 
 export default function IndexPage() {
   return (
@@ -16,6 +17,7 @@ export default function IndexPage() {
       <TaskSection />
       <Services />
       <PassionSection />
+      <Footer />
     </Layout>
   );
 }
