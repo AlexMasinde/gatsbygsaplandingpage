@@ -3,7 +3,6 @@ import React from "react";
 import {
   container,
   social,
-  policy,
   careers,
   socialContainer,
   content,
@@ -14,7 +13,7 @@ export default function Footer() {
     <div className={container}>
       <div className={content}>
         <div className={socialContainer}>
-          <div className={policy}>
+          <div>
             <p>Terms of Service</p>
             <p>Privacy Policy</p>
           </div>

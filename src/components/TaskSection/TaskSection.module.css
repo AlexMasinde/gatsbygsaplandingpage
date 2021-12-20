@@ -16,6 +16,7 @@
   left: 68.2%;
   background-image: url("../../images/taskrightbottom.png");
   background-repeat: no-repeat;
+  filter: grayscale(100%);
 }
 
 .sectionGrid {

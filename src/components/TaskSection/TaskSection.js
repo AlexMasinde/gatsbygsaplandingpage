@@ -1,7 +1,6 @@
 import React from "react";
 
 import imageLeft from "../../images/taskleft.png";
-import imageRightBottom from "../../images/taskrightbottom.png";
 
 import { container, left, center, sectionGrid } from "./TaskSection.module.css";
 
