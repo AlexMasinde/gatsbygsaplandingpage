@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import passionsRightImage from "../../images/passionsRight.png";
 import passionsLeftImage from "../../images/passionsLeft.png";
@@ -12,11 +12,20 @@ import {
   passionsCenter,
   passionsCenterText,
 } from "./PassionSection.module.css";
+import { passionSectionExitAnimation } from "../../animations/passionSectionAnimations";
 
 export default function PassionSection() {
+  const sectionGridRef = useRef();
+  const sectionRef = useRef();
+
+  useEffect(() => {
+    const scrollOut = passionSectionExitAnimation(sectionRef, sectionGridRef);
+    return () => scrollOut.kill();
+  });
+
   return (
-    <div className={container}>
-      <div className={passionsGrid}>
+    <div ref={sectionRef} className={container}>
+      <div ref={sectionGridRef} className={passionsGrid}>
         <div
           className={passionsLeft}
           style={{ backgroundImage: `url(${passionsLeftImage})` }}

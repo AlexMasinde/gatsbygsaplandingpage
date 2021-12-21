@@ -6,19 +6,6 @@
   z-index: 1;
 }
 
-.container::after {
-  content: "";
-  position: absolute;
-  display: inline-block;
-  bottom: 0;
-  width: 375px;
-  height: 564px;
-  left: 68.2%;
-  background-image: url("../../images/taskrightbottom.png");
-  background-repeat: no-repeat;
-  filter: grayscale(100%);
-}
-
 .sectionGrid {
   height: fit-content;
   display: grid;
@@ -31,7 +18,7 @@
 
 .left {
   height: 704px;
-  margin-top: 125px;
+  margin-top: 7vh;
   position: relative;
 }
 
@@ -46,6 +33,19 @@
   background-image: url("../../images/tasksvg.svg");
   background-repeat: no-repeat;
   z-index: -1;
+}
+
+.center::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+  width: 375px;
+  height: 564px;
+  left: 75%;
+  background-image: url("../../images/taskrightbottom.png");
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
 }
 
 .left,

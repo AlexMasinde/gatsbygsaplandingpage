@@ -1,4 +1,8 @@
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
+
+import { heroEntry, heroExit } from "../../animations/heroAnimations";
+
+import Navigation from "../navigation/navigation";
 
 import {
   left,
@@ -8,27 +12,47 @@ import {
   rightText,
   grid,
   centerChild,
+  heroContainer,
 } from "./Hero.module.css";
 
 import heroMain from "../../images/hero-main.png";
 import heroRight from "../../images/hero-right.png";
 
 export default function Hero() {
+  const gridRef = useRef();
+  const leftRef = useRef();
+  const rightRef = useRef();
+  const navigationRef = useRef();
+  const heroMainRef = useRef();
+
+  useLayoutEffect(() => {
+    heroEntry(leftRef, rightRef, navigationRef);
+    const animation = heroExit(gridRef, heroMainRef);
+    return () => animation.kill();
+  });
+
   return (
-    <div className={grid}>
-      <div className={left}>
-        <h1>Hi, we are Debonaire. Ready to create an art form on your body.</h1>
+    <div ref={heroMainRef} className={heroContainer}>
+      <div ref={navigationRef}>
+        <Navigation />
       </div>
-      <div className={center} style={{ backgroundImage: `url(${heroMain})` }}>
-        <div className={centerChild}></div>
-      </div>
-      <div className={right}>
-        <div
-          className={rightImage}
-          style={{ backgroundImage: `url(${heroRight})` }}
-        ></div>
-        <div className={rightText}>
-          <p>A natural product-based, hair design &amp; boutique.</p>
+      <div ref={gridRef} className={grid}>
+        <div ref={leftRef} className={left}>
+          <h1>
+            Hi, we are Debonaire. Ready to create an art form on your body.
+          </h1>
+        </div>
+        <div className={center} style={{ backgroundImage: `url(${heroMain})` }}>
+          <div className={centerChild}></div>
+        </div>
+        <div ref={rightRef} className={right}>
+          <div
+            className={rightImage}
+            style={{ backgroundImage: `url(${heroRight})` }}
+          ></div>
+          <div className={rightText}>
+            <p>A natural product-based, hair design &amp; boutique.</p>
+          </div>
         </div>
       </div>
     </div>

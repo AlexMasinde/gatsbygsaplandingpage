@@ -1,3 +1,17 @@
+.heroContainer {
+  max-width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #dfccc2;
+  position: relative;
+  z-index: 1;
+
+  /* rules */
+  --center-child-before-height-width: 237px;
+  --center-before-height: 200px;
+  --center-before-opacity: 1;
+}
+
 .grid {
   display: grid;
   width: 875px;
@@ -67,8 +81,9 @@
   position: absolute;
   display: inline-block;
   top: 70%;
-  height: 200px;
+  height: var(--center-before-height);
   width: 197px;
+  opacity: var(--center-before-opacity);
   left: -90px;
   background-image: url("../../images/hero-bottom-left.svg");
   background-repeat: no-repeat;
@@ -82,6 +97,7 @@
   top: 68%;
   height: 237px;
   width: 237px;
+  opacity: var(--center-before-opacity);
   left: 63%;
   background-image: url("../../images/hero-bottom-right.svg");
   background-repeat: no-repeat;
@@ -93,8 +109,8 @@
   position: absolute;
   display: inline-block;
   top: -18%;
-  height: 237px;
-  width: 237px;
+  height: var(--center-child-before-height-width);
+  width: var(--center-child-before-height-width);
   left: 80%;
   background-image: url("../../images/hero-top-right.svg");
   background-repeat: no-repeat;

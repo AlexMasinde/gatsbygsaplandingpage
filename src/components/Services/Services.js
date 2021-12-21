@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import servicesRightImage from "../../images/servicesRight.png";
 import servicesLeftImage from "../../images/servicesLeft.png";
@@ -13,14 +15,24 @@ import {
   servicesHeader,
   servicesCenterText,
 } from "./Services.module.css";
+import { servicesExitTimeline } from "../../animations/servicesSectionAnimations";
 
 export default function Services() {
+  const sectionRef = useRef();
+  const sectionGridRef = useRef();
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    servicesExitTimeline(sectionRef, sectionGridRef);
+  });
+
   return (
-    <div className={container}>
+    <div ref={sectionRef} className={container}>
       <div className={servicesHeader}>
         <h3>Our Services</h3>
       </div>
-      <div className={servicesGrid}>
+      <div ref={sectionGridRef} className={servicesGrid}>
         <div
           className={servicesLeft}
           style={{ backgroundImage: `url(${servicesLeftImage})` }}
