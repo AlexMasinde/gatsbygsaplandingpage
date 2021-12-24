@@ -116,3 +116,26 @@
   background-repeat: no-repeat;
   z-index: -1;
 }
+
+@media screen and (max-width: 600px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .center::before,
+  .center::after,
+  .right,
+  .centerChild {
+    display: none;
+  }
+
+  .center {
+    width: 350px;
+    height: 350px;
+    margin-top: 20px;
+  }
+  .left {
+    text-align: center;
+  }
+}

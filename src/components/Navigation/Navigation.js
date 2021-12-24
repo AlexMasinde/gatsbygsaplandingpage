@@ -11,9 +11,9 @@ export default function Navigation() {
   return (
     <div className={container}>
       <div className={navigation}>
-        <p>Menus</p>
-        <p>About &amp; Careers</p>
-        <p>Menus</p>
+        <p>Menu</p>
+        <p>About &#38; Careers</p>
+        <p>Contact</p>
       </div>
       <div className={logo}>
         <p>debonaire</p>

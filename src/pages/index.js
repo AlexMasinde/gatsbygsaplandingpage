@@ -8,6 +8,7 @@ import PassionSection from "../components/PassionSection/PassionSection";
 import Services from "../components/Services/Services";
 import TaskSection from "../components/TaskSection/TaskSection";
 import Footer from "../components/Footer/Footer";
+import Navigation from "../components/navigation/navigation";
 
 export default function IndexPage() {
   useLayoutEffect(() => {

@@ -1,20 +1,25 @@
 import React, { useEffect, useRef } from "react";
 
 import { exitAnimation } from "../../animations/taskSectionAnimations";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 import imageLeft from "../../images/taskleft.png";
 
 import { container, left, center, sectionGrid } from "./TaskSection.module.css";
 
 export default function TaskSection() {
+  const isMobile = useMediaQuery("(max-width: 768px)");
+
   const sectionGridRef = useRef();
   const sectionRef = useRef();
 
   useEffect(() => {
-    const scrollOut = exitAnimation(sectionRef, sectionGridRef);
-    return () => {
-      scrollOut.kill();
-    };
+    if (!isMobile) {
+      const scrollOut = exitAnimation(sectionRef, sectionGridRef);
+      return () => {
+        scrollOut.kill();
+      };
+    }
   });
 
   return (

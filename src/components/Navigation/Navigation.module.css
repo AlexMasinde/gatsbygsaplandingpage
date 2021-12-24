@@ -5,7 +5,8 @@
   color: #ffffff;
   width: 1342px;
   padding-top: 30px;
-  margin: 0 auto 30px;
+  margin: 0 auto;
+  background-color: #dfccc2;
 }
 
 .navigation {
