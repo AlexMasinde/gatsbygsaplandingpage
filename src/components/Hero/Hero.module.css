@@ -85,7 +85,7 @@
   width: 197px;
   opacity: var(--center-before-opacity);
   left: -90px;
-  background-image: url("/images/hero-bottom-left.svg");
+  background-image: url("../../../public/static/images/hero-bottom-left.svg");
   background-repeat: no-repeat;
   z-index: -1;
 }
@@ -99,7 +99,7 @@
   width: 237px;
   opacity: var(--center-before-opacity);
   left: 63%;
-  background-image: url("/images/hero-bottom-right.svg");
+  background-image: url("../../../public/static/images/hero-bottom-right.svg");
   background-repeat: no-repeat;
   z-index: -1;
 }
@@ -112,7 +112,7 @@
   height: var(--center-child-before-height-width);
   width: var(--center-child-before-height-width);
   left: 80%;
-  background-image: url("/images/hero-top-right.svg");
+  background-image: url("../../../public/static/images/hero-top-right.svg");
   background-repeat: no-repeat;
   z-index: -1;
 }
