@@ -54,7 +54,7 @@
 }
 
 .passionsCenter::before {
-  background-image: url("../../../public/static/images/passionsLeftSvg.svg");
+  background-image: url("/images/passionsLeftSvg.svg");
   width: 237px;
   height: 252px;
   top: 30%;
@@ -63,7 +63,7 @@
 }
 
 .passionsCenter::after {
-  background-image: url("../../../public/static/images/passionsRightSvg.svg");
+  background-image: url("/images/passionsRightSvg.svg");
   width: 100%;
   height: 100%;
   transform: scale(0.5) rotate(35deg);

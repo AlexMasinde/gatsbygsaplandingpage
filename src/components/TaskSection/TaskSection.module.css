@@ -30,7 +30,7 @@
   width: 100%;
   height: 100%;
   left: 80%;
-  background-image: url("../../../public/static/images/tasksvg.svg");
+  background-image: url("/images/tasksvg.svg");
   background-repeat: no-repeat;
   z-index: -1;
 }
@@ -43,7 +43,7 @@
   width: 375px;
   height: 564px;
   left: 75%;
-  background-image: url("../../../public/static/images/taskrightbottom.png");
+  background-image: url("/images/taskrightbottom.png");
   background-repeat: no-repeat;
   filter: grayscale(100%);
 }
