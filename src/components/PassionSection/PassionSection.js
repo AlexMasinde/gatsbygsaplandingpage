@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from "react";
 
+import { passionSectionExitAnimation } from "../../animations/passionSectionAnimations";
+
 import passionsRightImage from "../../images/passionsRight.png";
 import passionsLeftImage from "../../images/passionsLeft.png";
 import passionsCenterImage from "../../images/passionsCenter.png";
@@ -12,7 +14,6 @@ import {
   passionsCenter,
   passionsCenterText,
 } from "./PassionSection.module.css";
-import { passionSectionExitAnimation } from "../../animations/passionSectionAnimations";
 
 export default function PassionSection() {
   const sectionGridRef = useRef();

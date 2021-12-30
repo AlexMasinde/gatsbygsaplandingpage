@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useRef } from "react";
 
 import { heroEntry, heroExit } from "../../animations/heroAnimations";
 
-import Navigation from "../navigation/navigation";
+import Navigation from "../Navigation/Navigation";
 
 import {
   left,
