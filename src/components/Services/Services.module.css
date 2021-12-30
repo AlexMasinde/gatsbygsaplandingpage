@@ -107,13 +107,13 @@
 .servicesCenter::before {
   height: 203px;
   width: 219px;
-  background-image: url("../../images/servciesCenterSvg.svg");
+  background-image: url("/images/servciesCenterSvg.svg");
   top: 75%;
   left: 25%;
 }
 
 .servicesRight::before {
-  background-image: url("../../images/servciesRightSvg.svg");
+  background-image: url("/images/servciesRightSvg.svg");
   width: 219px;
   height: 100%;
   transform: scale(0.5);
