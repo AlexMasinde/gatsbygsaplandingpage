@@ -17,11 +17,8 @@ import {
 
 import heroMain from "../../images/hero-main.png";
 import heroRight from "../../images/hero-right.png";
-import useMediaQuery from "../../hooks/useMediaQuery";
 
 export default function Hero() {
-  const isMobile = useMediaQuery("(max-width: 768px)");
-
   const gridRef = useRef();
   const leftRef = useRef();
   const rightRef = useRef();
@@ -29,11 +26,9 @@ export default function Hero() {
   const heroMainRef = useRef();
 
   useLayoutEffect(() => {
-    if (!isMobile) {
-      heroEntry(leftRef, rightRef, navigationRef);
-      const animation = heroExit(gridRef, heroMainRef);
-      return () => animation.kill();
-    }
+    heroEntry(leftRef, rightRef, navigationRef);
+    const animation = heroExit(gridRef, heroMainRef);
+    return () => animation.kill();
   });
 
   return (

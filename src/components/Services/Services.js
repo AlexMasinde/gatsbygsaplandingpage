@@ -15,6 +15,7 @@ import {
   servicesHeader,
   servicesCenterText,
 } from "./Services.module.css";
+
 import { servicesExitTimeline } from "../../animations/servicesSectionAnimations";
 
 export default function Services() {
