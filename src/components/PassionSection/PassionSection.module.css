@@ -54,7 +54,7 @@
 }
 
 .passionsCenter::before {
-  background-image: url("../../images/passionsleftSvg.svg");
+  /* background-image: url("../../images/passionsleftSvg.svg"); */
   width: 237px;
   height: 252px;
   top: 30%;
